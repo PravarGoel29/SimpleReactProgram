@@ -1,2 +1,2 @@
 # SimpleSpringBootProject
-A simple web-based program developed using Spring Boot.
+A simple web-based Student Management System developed using Spring Boot.
