@@ -28,9 +28,6 @@ public class StudentController {
 	@Autowired
 	StudentRepository repo;
 	
-//	@Autowired
-//	StudentDto studentDto;
-	
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
     }
@@ -54,12 +51,7 @@ public class StudentController {
     	m.addAttribute("students", repo.findById(id));
 		return "students";	
     }
-    
-//    @RequestMapping({"/addStudent"})
-//    public String addStudent(@ModelAttribute Student s) {
-//    	repo.save(s);
-//		return "index";
-//    }
+
     @GetMapping({"/students"})
     public String listStudents(Model model){
         List<StudentDto> students = studentService.getAllStudents();
